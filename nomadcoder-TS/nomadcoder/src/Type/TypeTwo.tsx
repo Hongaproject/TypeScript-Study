@@ -13,7 +13,7 @@ const player: [string, number, boolean] = ["hongga", 1, true];
 //any
 const a : any[] = [1,2,3,4]
 const b : any = true
-a+b;
+
 
 function TypeTwo () {
     return(

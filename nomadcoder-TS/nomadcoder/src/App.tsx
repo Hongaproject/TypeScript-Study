@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css';
 import TypeOne from './Type/TypeOne';
 import TypeTwo from './Type/TypeTwo';
+import TypeThree from './Type/TypeThree';
 
 
 function App() {
@@ -10,6 +10,7 @@ function App() {
     <div>
       <TypeOne />
       <TypeTwo />
+      <TypeThree />
     </div>
   );
 }
