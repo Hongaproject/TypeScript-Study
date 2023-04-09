@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import TypeOne from './Type/TypeOne';
 import TypeTwo from './Type/TypeTwo';
 import TypeThree from './Type/TypeThree';
