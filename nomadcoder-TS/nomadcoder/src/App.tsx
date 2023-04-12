@@ -4,6 +4,8 @@ import TypeTwo from './Type/TypeTwo';
 import TypeThree from './Type/TypeThree';
 import Func from './Funct/Func';
 import Overload from './Funct/Overload';
+import Polym from './Funct/Polym';
+import Conclus from './Funct/Conclus';
 
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
       <TypeThree />
       <Func />
       <Overload />
+      <Polym />
+      <Conclus />
     </div>
   );
 }
