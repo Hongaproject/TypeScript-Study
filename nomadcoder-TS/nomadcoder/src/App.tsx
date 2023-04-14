@@ -6,6 +6,7 @@ import Func from './Funct/Func';
 import Overload from './Funct/Overload';
 import Polym from './Funct/Polym';
 import Conclus from './Funct/Conclus';
+import Classes from './ClassInterface/Classes';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Overload />
       <Polym />
       <Conclus />
+      <Classes />
     </div>
   );
 }
