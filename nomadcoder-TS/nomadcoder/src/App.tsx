@@ -7,6 +7,7 @@ import Overload from './Funct/Overload';
 import Polym from './Funct/Polym';
 import Conclus from './Funct/Conclus';
 import Classes from './ClassInterface/Classes';
+import Interface from './ClassInterface/Interface';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Polym />
       <Conclus />
       <Classes />
+      <Interface />
     </div>
   );
 }
