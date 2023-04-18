@@ -9,6 +9,7 @@ import Conclus from './Funct/Conclus';
 import Classes from './ClassInterface/Classes';
 import Interface from './ClassInterface/Interface';
 import InterfaceT from './ClassInterface/InterfaceT';
+import Polymorphism from './ClassInterface/Polymorphism';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Classes />
       <Interface />
       <InterfaceT />
+      <Polymorphism />
     </div>
   );
 }
