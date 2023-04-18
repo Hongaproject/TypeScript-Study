@@ -8,6 +8,7 @@ import Polym from './Funct/Polym';
 import Conclus from './Funct/Conclus';
 import Classes from './ClassInterface/Classes';
 import Interface from './ClassInterface/Interface';
+import InterfaceT from './ClassInterface/InterfaceT';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Conclus />
       <Classes />
       <Interface />
+      <InterfaceT />
     </div>
   );
 }

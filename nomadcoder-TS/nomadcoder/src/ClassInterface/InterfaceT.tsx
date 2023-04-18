@@ -26,7 +26,7 @@ interface Human {
     health:number
 }
 
-class Player implements User, Human { //interface는 타입에서만 존재 
+class Player implements User, Human { //interface는 타입에서만 존재함. 
     constructor(
         public firstName:string,
         public lastName:string,
