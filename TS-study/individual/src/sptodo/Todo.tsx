@@ -54,7 +54,7 @@ function Todo () {
                         <div key={index}>
                             <p>{item.title}</p>
                             <div>
-                                <button onClick={onDelete}>삭제</button>
+                                <button onClick={() => onDelete}>삭제</button>
                             </div>
                         </div>
                     ))
