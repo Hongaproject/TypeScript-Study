@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Todo from './sptodo/Todo';
+import TodoErr from './sptodo/TodoErr';
+import TodoR from './sptodo/TodoR';
 
 // interface itf1 { // 처음 생성
 //   a: number;
@@ -58,7 +60,9 @@ function App() {
 
   return (
     <div>
-      <Todo />
+      {/* <Todo /> */}
+      <TodoErr />
+      <TodoR />
     </div>
   );
 }
