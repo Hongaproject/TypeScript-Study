@@ -40,11 +40,10 @@ function TodoR () {
                 <button>등록</button>
             </form>
             <div>
-                { 
-                    list.map((item) => (
-                        <div key={item.id}>
-                            <p>{item.title}</p>
-                            <button onClick={()=> onDelete(item.id)}>삭제</button>
+                {
+                    list.map((todo) => (
+                        <div>
+                            <TodoRItem list={list} setList={setList} id={todo.id} title={todo.title} onDelete={() => onDelete(todo.id)}/>
                         </div>
                     ))
                 }
@@ -53,10 +52,48 @@ function TodoR () {
     );
 }
 
-function TodoRItem () {
+function TodoRItem ({list, title, onDelete, setList, id}) {
+    // 수정부분을 위해 작성
+
+    const [isUpdate, setIsUpdate] = useState(false); // 수정 사항 구별 
+    const [updateText, setUpdateText] = useState(title); // 편집시 사용할 input의 value값을 받기 위해 state 생성
+    
+    const onChange = (e) => {
+        setUpdateText(e.target.value);
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        const newUpdate = list.map((data) => {
+            if(data.id === id){
+                data.title = updateText
+            }
+            return data
+        });
+
+        setList(newUpdate);
+        setIsUpdate(false);
+    }
+
     return(
         <div>
-            
+            {
+                !isUpdate ? (
+                    <div>
+                        <p>{title}</p>
+                        <button onClick={() => setIsUpdate(true)}>수정</button>
+                        <button onClick={onDelete}>삭제</button>
+                    </div>
+                ) : (
+                    <div>
+                        <form onSubmit={onSubmit}>
+                            <input type="text" onChange={onChange} value={updateText} />
+                            <button>확인</button>
+                            <button onClick={() => setIsUpdate(false)}>취소</button>
+                        </form>
+                    </div>
+                )
+            }
         </div>
     );
 }
