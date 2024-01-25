@@ -1,5 +1,17 @@
 import { useState } from "react";
 
+// 타입스크립트는 type과 interface로 객체 타입을 지정할 수 있다.
+// type과 interface의 차이
+// 둘 다 비슷하지만 약간의 차이가 있음
+// 공통점은 확장 상속이 가능하다.
+// 차이점은 선언적 확장이 되고 안되고가 있다.
+
+// interface는 extends키워드를 사용하여 확장
+// type은 &기호를 사용하여 확장
+
+// interface는 같은 이름을 사용하면 선언적으로 확장이 가능함.
+// type은 선언적 확장이 불가능 함.
+
 interface List {
     id: number;
     title: string;
@@ -7,8 +19,8 @@ interface List {
 
 function Todo () {
     // 투두리스트 제작 - 삼항 x, 기능구현 정보 안찾으면서 제작, TS로 제작 
-    const [text, setText] = useState<string>("");
-    const [todoList, setTodoList] = useState<List[]>([
+    const [text, setText] = useState<string>(""); // 타입을 지정해준다.
+    const [todoList, setTodoList] = useState<List[]>([ 
         {
           id: 1,
           title: "할일 1",
