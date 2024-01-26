@@ -61,8 +61,8 @@ function App() {
   return (
     <div>
       {/* <Todo /> */}
-      <TodoErr />
-      <TodoR />
+      {/* <TodoErr />
+      <TodoR /> */}
     </div>
   );
 }
